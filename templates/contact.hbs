@@ -15,6 +15,8 @@
         <li>{{#link-to 'phone'}}☏{{/link-to}}</li>
         <li>{{#link-to 'email'}}✉{{/link-to}}</li>
       </ul>
+
+      <p>Or, <a href='#' {{action 'sendMessage'}}>click here</a> to send a secret message.</p>
     </div>
     <div class="col-md-6">
       {{outlet}}
