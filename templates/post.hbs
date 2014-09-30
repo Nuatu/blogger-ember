@@ -1,5 +1,13 @@
 <h1>{{title}}</h1>
 
+<h2>Comments</h2>
+
+{{#each comments}}
+  <p>
+    {{text}}
+  </p>
+{{/each}}
+
 {{#if isEditing}}
   <form>
     <div class="form-group">
@@ -21,4 +29,6 @@
   <button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 {{/if}}
 
+<p>{{#link-to 'new-comment' this class="btn btn-default"}}New comment{{/link-to}}</p>
+{{outlet}}
 
